@@ -1,0 +1,141 @@
+{
+  "metadata": {
+    "title": "Alireza Tahavori | Frontend Developer",
+    "description": "Portfolio of Alireza Tahavori, a frontend developer crafting modern web experiences."
+  },
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "skills": "Skills",
+    "projects": "Projects",
+    "experiences": "Experience",
+    "contact": "Contact",
+    "name": "Alireza Tahavori"
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "Something went wrong"
+  },
+  "hero": {
+    "name": "Alireza Tahavori",
+    "intro": "Hi, I'm",
+    "contactBtn": "Get In Touch",
+    "getInTouch": "Get In Touch",
+    "downloadResume": "Download Resume",
+    "resumeEn": "Resume (EN)",
+    "resumeFa": "Resume (FA)"
+  },
+  "about": {
+    "title": "About Me",
+    "openToCollaboration": "Open to collaboration"
+  },
+  "skills": {
+    "title": "Skills & Technologies",
+    "description": "Here are the technologies and tools I work with to bring ideas to life."
+  },
+  "projects": {
+    "title": "Featured Projects",
+    "description": "Here are some of my recent projects that showcase my skills and passion for frontend development.",
+    "buttons": {
+      "liveDemo": "Live Demo"
+    }
+  },
+  "experience": {
+    "title": "Experience & Education",
+    "description": "My professional journey and educational background in software development.",
+    "sections": {
+      "experience": "Work Experience",
+      "education": "Education",
+      "courses": "Courses"
+    }
+  },
+  "contact": {
+    "title": "Get In Touch",
+    "description": "I'm always interested in new opportunities and exciting projects. Let's discuss how we can work together!",
+    "formTitle": "Send me a message",
+    "formDescription": "Fill out the form below and I'll get back to you as soon as possible.",
+    "name": "Your Name",
+    "email": "Your Email",
+    "subject": "Subject",
+    "message": "Your Message",
+    "submit": "Send Message",
+    "success": "Form submitted successfully.",
+    "error": "Failed to submit form.",
+    "contactInfoTitle": "Contact Information",
+    "followMeTitle": "Follow Me",
+    "ctaTitle": "Let's collaborate!",
+    "ctaDescription": "I'm currently available for freelance projects and full-time opportunities. Whether you have a project in mind or just want to chat about technology, I'd love to hear from you.",
+    "loading": "Sending..."
+  },
+  "footer": {
+    "copyright": "© 2025 Alireza Tahavori. All rights reserved."
+  },
+  "notFound": {
+    "errorCode": "Error 404",
+    "title": "Page not found",
+    "description": "The page you’re looking for doesn’t exist or may have been moved.",
+    "goHome": "Go to Home",
+    "contactSupport": "Contact support",
+    "checkUrlTitle": "Check the URL",
+    "checkUrlDescription": "Make sure there are no typos in the address bar.",
+    "headBackTitle": "Head back home",
+    "headBackDescription": "Start from the homepage and navigate to what you need.",
+    "srMessage": "Use the Home button to return to the main page.",
+    "refreshPage": "Refresh Page"
+  },
+  "theme": {
+    "title": "Theme Settings",
+    "description": "Choose your preferred color scheme",
+    "active": "Active",
+    "preference_note": "Theme preference is saved locally",
+    "random": "Random",
+    "colors": "Colors",
+    "mode": "Mode",
+    "available": "available",
+    "current": "Current",
+    "display_mode": "Display Mode",
+    "color_schemes": "Color Schemes",
+    "color_description": "Choose your favorite color palette",
+    "current_scheme": "Current",
+    "theme_count": "{{count}} themes",
+    "schemes": {
+      "blue": {
+        "name": "Ocean Blue",
+        "description": "Cool and professional ocean vibes"
+      },
+      "purple": {
+        "name": "Royal Purple",
+        "description": "Elegant and creative royal theme"
+      },
+      "green": {
+        "name": "Forest Green",
+        "description": "Natural and calming forest theme"
+      },
+      "orange": {
+        "name": "Sunset Orange",
+        "description": "Warm and energetic sunset vibes"
+      },
+      "pink": {
+        "name": "Cherry Blossom",
+        "description": "Soft and romantic cherry theme"
+      },
+      "teal": {
+        "name": "Tropical Teal",
+        "description": "Fresh and modern tropical theme"
+      },
+      "indigo": {
+        "name": "Midnight Indigo",
+        "description": "Deep and mysterious midnight theme"
+      },
+      "amber": {
+        "name": "Golden Amber",
+        "description": "Rich and luxurious golden theme"
+      }
+    },
+    "options": {
+      "light": "Light",
+      "dark": "Dark",
+      "system": "System"
+    }
+  }
+}
