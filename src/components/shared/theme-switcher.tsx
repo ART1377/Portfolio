@@ -61,8 +61,11 @@ const ThemeSwitcher = ({ placement = 'bottom' }: ThemeSwitcherProps) => {
           <motion.div
             ref={menuRef}
             className={cn(
-              'absolute z-50 w-80 max-w-[calc(100vw-2rem)]',
-              placement === 'bottom' ? 'inset-e-0 top-12' : 'inset-s-0 bottom-12'
+              // Fixed position for mobile
+              'fixed left-1/2 z-50 w-[calc(100vw-2rem)] max-w-xs -translate-x-1/2',
+              // Desktop: absolute relative to button
+              'sm:absolute sm:right-0 sm:left-auto sm:w-72 sm:translate-x-0',
+              placement === 'bottom' ? 'top-16 sm:top-12' : 'bottom-16 sm:bottom-12'
             )}
             initial={{ opacity: 0, scale: 0.9, y: placement === 'bottom' ? -10 : 10 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
@@ -70,15 +73,15 @@ const ThemeSwitcher = ({ placement = 'bottom' }: ThemeSwitcherProps) => {
             transition={{ duration: 0.15 }}
           >
             <Card className="border-2 shadow-xl">
-              <CardHeader className="pb-3">
-                <CardTitle className="flex items-center gap-2 text-base">
+              <CardHeader className="pb-2 sm:pb-3">
+                <CardTitle className="flex items-center gap-2 text-sm sm:text-base">
                   <Settings className="text-primary h-4 w-4" />
                   {t('title')}
                 </CardTitle>
               </CardHeader>
-              <CardContent className="space-y-5">
+              <CardContent className="space-y-4 sm:space-y-5">
                 {/* Mode selector */}
-                <div className="grid grid-cols-3 gap-2">
+                <div className="grid grid-cols-3 gap-1.5 sm:gap-2">
                   {modeOptions.map((option) => {
                     const Icon = option.icon;
                     const isActive = mode === option.value;
@@ -89,12 +92,12 @@ const ThemeSwitcher = ({ placement = 'bottom' }: ThemeSwitcherProps) => {
                         size="sm"
                         onClick={() => setThemeMode(option.value)}
                         className={cn(
-                          'h-auto flex-col gap-1 py-2',
+                          'h-auto flex-col gap-1 px-1 py-2 sm:px-2',
                           isActive ? 'cursor-default' : 'cursor-pointer'
                         )}
                       >
-                        <Icon className="h-4 w-4" />
-                        <span className="text-xs">{option.label}</span>
+                        <Icon className="h-3.5 w-3.5 sm:h-4 sm:w-4" />
+                        <span className="text-[10px] sm:text-xs">{option.label}</span>
                       </Button>
                     );
                   })}
@@ -102,8 +105,10 @@ const ThemeSwitcher = ({ placement = 'bottom' }: ThemeSwitcherProps) => {
 
                 {/* Color scheme selector */}
                 <div>
-                  <h3 className="mb-3 text-sm font-medium">{t('color_schemes')}</h3>
-                  <div className="grid grid-cols-4 gap-2">
+                  <h3 className="mb-2 text-xs font-medium sm:mb-3 sm:text-sm">
+                    {t('color_schemes')}
+                  </h3>
+                  <div className="grid grid-cols-4 gap-1.5 sm:gap-2">
                     {colorSchemes.map((scheme) => {
                       const isActive = colorScheme === scheme.id;
                       return (
@@ -115,7 +120,7 @@ const ThemeSwitcher = ({ placement = 'bottom' }: ThemeSwitcherProps) => {
                           aria-label={t(`schemes.${scheme.id}.name`)}
                           aria-pressed={isActive}
                           className={cn(
-                            'group relative flex flex-col items-center gap-1.5 rounded-xl border p-2 transition-all',
+                            'group relative flex flex-col items-center gap-1 rounded-lg border p-1.5 transition-all sm:gap-1.5 sm:p-2',
                             isActive
                               ? 'border-primary bg-primary/10 shadow-sm'
                               : 'hover:border-border hover:bg-muted/50 border-transparent',
@@ -123,7 +128,7 @@ const ThemeSwitcher = ({ placement = 'bottom' }: ThemeSwitcherProps) => {
                           )}
                         >
                           <span
-                            className="relative h-8 w-8 rounded-full shadow-inner transition-transform group-hover:scale-110"
+                            className="relative h-6 w-6 rounded-full shadow-inner transition-transform group-hover:scale-110 sm:h-8 sm:w-8"
                             style={{ backgroundColor: scheme.color }}
                           >
                             {isActive && (
@@ -132,11 +137,11 @@ const ThemeSwitcher = ({ placement = 'bottom' }: ThemeSwitcherProps) => {
                                 animate={{ scale: 1 }}
                                 className="absolute inset-0 flex items-center justify-center"
                               >
-                                <Check className="h-4 w-4 text-white drop-shadow" />
+                                <Check className="h-3 w-3 text-white drop-shadow sm:h-4 sm:w-4" />
                               </motion.span>
                             )}
                           </span>
-                          <span className="text-muted-foreground group-hover:text-foreground text-[10px] font-medium">
+                          <span className="text-muted-foreground group-hover:text-foreground text-[8px] font-medium sm:text-[10px]">
                             {t(`schemes.${scheme.id}.name`)}
                           </span>
                         </button>
