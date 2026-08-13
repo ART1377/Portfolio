@@ -12,7 +12,7 @@ const ProjectsSkeleton = () => {
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
           {[...Array(6)].map((_, i) => (
             <div key={i} className="space-y-4 overflow-hidden rounded-xl border shadow-sm">
-              <Skeleton className="h-48 w-full" />
+              <Skeleton className="h-60 w-full" />
               <div className="space-y-2 px-4">
                 <Skeleton className="h-5 w-3/4" />
                 <Skeleton className="h-4 w-full" />

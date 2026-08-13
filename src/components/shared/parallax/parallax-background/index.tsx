@@ -53,33 +53,33 @@ const ParallaxBackground = () => {
     <div ref={ref} className="pointer-events-none fixed inset-0 -z-10 overflow-hidden">
       {/* gradient layers */}
       <motion.div
-        className="absolute inset-0 bg-gradient-to-br from-blue-500/5 via-purple-500/5 to-pink-500/5"
+        className="absolute inset-0 bg-linear-to-br from-blue-500/5 via-purple-500/5 to-pink-500/5"
         style={{ y: y1, opacity: opacity1 }}
       />
       <motion.div
-        className="absolute inset-0 bg-gradient-to-tl from-green-500/3 via-blue-500/3 to-purple-500/3"
+        className="absolute inset-0 bg-linear-to-tl from-green-500/3 via-blue-500/3 to-purple-500/3"
         style={{ y: y2, opacity: opacity2 }}
       />
 
       {/* floating shapes */}
       <motion.div
-        className="absolute top-20 left-10 h-32 w-32 rounded-full bg-gradient-to-br from-blue-400/10 to-purple-400/10 blur-xl"
+        className="absolute top-20 left-10 h-32 w-32 rounded-full bg-linear-to-br from-blue-400/10 to-purple-400/10 blur-xl"
         style={{ y: y1, scale: scale1 }}
       />
       <motion.div
-        className="absolute top-40 right-20 h-24 w-24 rounded-lg bg-gradient-to-br from-pink-400/10 to-red-400/10 blur-lg"
+        className="absolute top-40 right-20 h-24 w-24 rounded-lg bg-linear-to-br from-pink-400/10 to-red-400/10 blur-lg"
         style={{ y: y2, rotate: rotate1 }}
       />
       <motion.div
-        className="absolute top-60 left-1/3 h-16 w-16 rounded-full bg-gradient-to-br from-green-400/10 to-blue-400/10 blur-md"
+        className="absolute top-60 left-1/3 h-16 w-16 rounded-full bg-linear-to-br from-green-400/10 to-blue-400/10 blur-md"
         style={{ y: y3, scale: scale2 }}
       />
       <motion.div
-        className="absolute right-10 bottom-40 h-40 w-40 rounded-full bg-gradient-to-br from-purple-400/8 to-pink-400/8 blur-2xl"
+        className="absolute right-10 bottom-40 h-40 w-40 rounded-full bg-linear-to-br from-purple-400/8 to-pink-400/8 blur-2xl"
         style={{ y: y4, opacity: opacity1 }}
       />
       <motion.div
-        className="absolute bottom-60 left-20 h-20 w-20 rounded-lg bg-gradient-to-br from-yellow-400/10 to-orange-400/10 blur-lg"
+        className="absolute bottom-60 left-20 h-20 w-20 rounded-lg bg-linear-to-br from-yellow-400/10 to-orange-400/10 blur-lg"
         style={{ y: y5, rotate: rotate2 }}
       />
 
@@ -132,11 +132,11 @@ const AnimatedLines = () => {
   return (
     <>
       <motion.div
-        className="via-primary/10 absolute top-0 left-1/4 h-full w-px bg-gradient-to-b from-transparent to-transparent"
+        className="via-primary/10 absolute top-0 left-1/4 h-full w-px bg-linear-to-b from-transparent to-transparent"
         style={{ y: y1 }}
       />
       <motion.div
-        className="via-primary/5 absolute top-0 right-1/3 h-full w-px bg-gradient-to-b from-transparent to-transparent"
+        className="via-primary/5 absolute top-0 right-1/3 h-full w-px bg-linear-to-b from-transparent to-transparent"
         style={{ y: y2 }}
       />
     </>
