@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 import { useTranslations } from 'next-intl';
 
@@ -27,6 +27,33 @@ const Navigation = () => {
     { id: 'experience', label: t('experiences'), icon: Briefcase },
     { id: 'contact', label: t('contact'), icon: Mail },
   ];
+
+  // Scroll spy with IntersectionObserver
+  useEffect(() => {
+    const sections = navItems
+      .map((item) => document.getElementById(item.id))
+      .filter(Boolean) as HTMLElement[];
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setActiveSection(entry.target.id);
+          }
+        });
+      },
+      {
+        rootMargin: '-50% 0px -50% 0px', // trigger when section is in the middle of viewport
+        threshold: 0,
+      }
+    );
+
+    sections.forEach((section) => observer.observe(section));
+
+    return () => {
+      sections.forEach((section) => observer.unobserve(section));
+    };
+  }, [navItems]);
 
   const scrollTo = (id: string) => {
     setActiveSection(id);

@@ -19,8 +19,8 @@ const HomePage = async ({ params }: HomePageProps) => {
       <Hero locale={currentLocale} />
       <About locale={currentLocale} />
       <Skills locale={currentLocale} />
-      <Experience locale={currentLocale} />
       <Projects locale={currentLocale} />
+      <Experience locale={currentLocale} />
       <Contact locale={currentLocale} />
     </main>
   );
