@@ -65,7 +65,11 @@
     "followMeTitle": "Follow Me",
     "ctaTitle": "Let's collaborate!",
     "ctaDescription": "I'm currently available for freelance projects and full-time opportunities. Whether you have a project in mind or just want to chat about technology, I'd love to hear from you.",
-    "loading": "Sending..."
+    "loading": "Sending...",
+    "nameRequired": "Name is required",
+    "emailInvalid": "Invalid email address",
+    "subjectRequired": "Subject is required",
+    "messageMin": "Message must be at least 10 characters"
   },
   "footer": {
     "copyright": "© 2025 Alireza Tahavori. All rights reserved."

@@ -16,7 +16,7 @@ import { Textarea } from '@/components/ui/textarea';
 
 import { sendContactEmail } from '../actions/send-contact-email';
 import { containerVariants, itemVariants } from '../constants';
-import { type ContactFormValues, contactFormSchema } from '../schema';
+import { type ContactFormValues, createContactFormSchema } from '../schema';
 
 type ContactFormProps = {
   isInView: boolean;
@@ -25,6 +25,8 @@ type ContactFormProps = {
 const ContactForm = ({ isInView }: ContactFormProps) => {
   const t = useTranslations('contact');
   const [isPending, startTransition] = useTransition();
+
+  const contactFormSchema = createContactFormSchema(t);
 
   const {
     register,
