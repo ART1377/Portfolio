@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion';
 
-import ParallaxHero from '@/components/parallax/parallax-hero';
+import ParallaxHero from '@/components/shared/parallax/parallax-hero';
 import type { HeroData } from '@/data/profile';
 
 import { containerVariants } from '../constants';
@@ -19,7 +19,7 @@ const HeroContent = ({ hero }: HeroContentProps) => {
   return (
     <section
       id="home"
-      className="relative flex min-h-screen items-center justify-center pt-16"
+      className="grid-noise relative flex min-h-screen items-center justify-center pt-16"
       aria-labelledby="hero-heading"
     >
       <ParallaxHero />

@@ -9,10 +9,10 @@ type SocialLink = {
 };
 
 export const socialLinks: SocialLink[] = [
-  { name: 'GitHub', url: 'https://github.com/yourusername', icon: FaGithub },
-  { name: 'LinkedIn', url: 'https://linkedin.com/in/yourusername', icon: FaLinkedinIn },
-  { name: 'Email', url: 'mailto:your@email.com', icon: HiOutlineMail },
-  { name: 'WhatsApp', url: 'https://wa.me/1234567890', icon: FaWhatsapp },
-  { name: 'Telegram', url: 'https://t.me/yourusername', icon: FaTelegramPlane },
-  { name: 'Phone', url: 'tel:+1234567890', icon: HiOutlinePhone },
+  { name: 'GitHub', url: 'https://github.com/ART1377', icon: FaGithub },
+  { name: 'LinkedIn', url: 'https://www.linkedin.com/in/alireza-tahavori', icon: FaLinkedinIn },
+  { name: 'Email', url: 'mailto:alirezatt705@gmail.com', icon: HiOutlineMail },
+  { name: 'WhatsApp', url: 'https://wa.me/qr/WZ72FZC4ETDUD1', icon: FaWhatsapp },
+  { name: 'Telegram', url: 'https://t.me/ART_1377', icon: FaTelegramPlane },
+  { name: 'Phone', url: 'tel:+989193050762', icon: HiOutlinePhone },
 ];

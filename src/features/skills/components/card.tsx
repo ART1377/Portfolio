@@ -1,7 +1,5 @@
 'use client';
 
-import { useState } from 'react';
-
 import { motion } from 'framer-motion';
 import {
   BarChart,
@@ -19,6 +17,7 @@ import {
 
 import { Card, CardContent } from '@/components/ui/card';
 import type { SkillCategory } from '@/data/skills';
+import { useTilt } from '@/hooks/use-tilt';
 
 import { cardVariants } from '../constants';
 
@@ -57,19 +56,7 @@ const getCategoryIcon = (title: string): LucideIcon => {
 };
 
 const SkillCard = ({ category, index, isInView }: SkillCardProps) => {
-  const [tilt, setTilt] = useState({ rx: 0, ry: 0 });
-
-  const handleMove = (e: React.MouseEvent<HTMLDivElement>) => {
-    const rect = e.currentTarget.getBoundingClientRect();
-    const px = (e.clientX - rect.left) / rect.width;
-    const py = (e.clientY - rect.top) / rect.height;
-    const ry = (px - 0.5) * 10;
-    const rx = (0.5 - py) * 10;
-    setTilt({ rx, ry });
-  };
-
-  const handleLeave = () => setTilt({ rx: 0, ry: 0 });
-
+  const { handleMouseMove, handleMouseLeave, style } = useTilt();
   const Icon = getCategoryIcon(category.title);
 
   return (
@@ -81,13 +68,9 @@ const SkillCard = ({ category, index, isInView }: SkillCardProps) => {
     >
       <Card
         className="bg-card/80 flex h-full flex-col rounded-2xl border border-transparent shadow-lg backdrop-blur-sm transition-all duration-300 hover:shadow"
-        onMouseMove={handleMove}
-        onMouseLeave={handleLeave}
-        style={{
-          transform: `perspective(1000px) rotateX(${tilt.rx}deg) rotateY(${tilt.ry}deg)`,
-          transformStyle: 'preserve-3d',
-          transition: 'transform 0.15s ease-out',
-        }}
+        onMouseMove={handleMouseMove}
+        onMouseLeave={handleMouseLeave}
+        style={style}
       >
         <CardContent className="flex flex-1 flex-col p-8">
           <motion.div
@@ -126,7 +109,7 @@ const SkillCard = ({ category, index, isInView }: SkillCardProps) => {
                   aria-valuemax={100}
                 >
                   <motion.div
-                    className="from-primary to-primary/70 h-full rounded-full bg-gradient-to-r shadow-sm"
+                    className="from-primary to-primary/70 h-full rounded-full bg-linear-to-r shadow-sm"
                     initial={{ width: 0 }}
                     animate={isInView ? { width: `${skill.level}%` } : { width: 0 }}
                     transition={{

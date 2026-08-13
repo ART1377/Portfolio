@@ -12,25 +12,25 @@ export type HeroData = {
 
 export const profileData: Record<'en' | 'fa', HeroData> = {
   en: {
-    name: 'John Doe',
-    initials: 'JD',
-    bio: 'Frontend Developer crafting modern web experiences.',
+    name: 'Alireza Tahavori',
+    initials: 'ART',
+    bio: 'Frontend Developer crafting modern web experiences with React, Next.js, and TypeScript.',
     roles: ['React Developer', 'Next.js Expert', 'UI/UX Enthusiast'],
     socials: {
-      github: 'https://github.com/johndoe',
-      linkedin: 'https://linkedin.com/in/johndoe',
-      email: 'john@example.com',
+      github: 'https://github.com/ART1377',
+      linkedin: 'https://www.linkedin.com/in/alireza-tahavori',
+      email: 'alirezatt705@gmail.com',
     },
   },
   fa: {
-    name: 'جان دو',
-    initials: 'ج',
-    bio: 'توسعه‌دهنده فرانت‌اند و طراح تجربه کاربری.',
+    name: 'علیرضا تهوری',
+    initials: 'ع',
+    bio: 'توسعه‌دهنده فرانت‌اند و طراح تجربه کاربری با React، Next.js و TypeScript.',
     roles: ['توسعه‌دهنده React', 'متخصص Next.js', 'علاقه‌مند به UI/UX'],
     socials: {
-      github: 'https://github.com/johndoe',
-      linkedin: 'https://linkedin.com/in/johndoe',
-      email: 'john@example.com',
+      github: 'https://github.com/ART1377',
+      linkedin: 'https://www.linkedin.com/in/alireza-tahavori',
+      email: 'alirezatt705@gmail.com',
     },
   },
 };

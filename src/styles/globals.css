@@ -37,6 +37,8 @@
 
 /* ========== BASE VARIABLES (Light & Dark) ========== */
 :root {
+  color-scheme: light;
+
   --font-en: 'Roboto', sans-serif;
   --font-fa: 'iran-sans', sans-serif;
   --radius: 0.5rem;
@@ -65,6 +67,8 @@
 }
 
 .dark {
+  color-scheme: dark;
+
   --background: hsl(222.2 84% 4.9%);
   --foreground: hsl(210 40% 98%);
   --card: hsl(222.2 84% 4.9%);
@@ -331,4 +335,16 @@
 html,
 body {
   overscroll-behavior: none;
+}
+
+button,
+a {
+  cursor: pointer !important;
+}
+
+.grid-noise {
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.035) 1px, transparent 1px) !important;
+  background-size: 32px 32px !important;
 }

@@ -1,5 +1,3 @@
-import { setRequestLocale } from 'next-intl/server';
-
 import About from '@/features/about';
 import Contact from '@/features/contact';
 import Experience from '@/features/experience';
@@ -14,19 +12,16 @@ type HomePageProps = {
 
 const HomePage = async ({ params }: HomePageProps) => {
   const { locale } = await params;
-  setRequestLocale(locale);
   const currentLocale = locale as Locale;
 
   return (
-    <main>
+    <main className="relative">
       <Hero locale={currentLocale} />
       <About locale={currentLocale} />
+      <Skills locale={currentLocale} />
       <Experience locale={currentLocale} />
       <Projects locale={currentLocale} />
-      <Skills locale={currentLocale} />
       <Contact locale={currentLocale} />
-
-      {/* Other sections will be added here */}
     </main>
   );
 };

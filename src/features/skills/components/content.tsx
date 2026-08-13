@@ -4,7 +4,7 @@ import { useRef } from 'react';
 
 import { motion, useInView } from 'framer-motion';
 
-import SectionParallax from '@/components/parallax/section-parallax';
+import SectionParallax from '@/components/shared/parallax/section-parallax';
 import type { SkillCategory } from '@/data/skills';
 
 import { containerVariants } from '../constants';

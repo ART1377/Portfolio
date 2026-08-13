@@ -11,23 +11,23 @@ export type ContactInfo = {
 
 export const contactData: Record<'en' | 'fa', ContactInfo> = {
   en: {
-    email: 'your.email@example.com',
-    phone: '+98 912 345 6789',
+    email: 'alirezatt705@gmail.com',
+    phone: '+98 919 305 0762',
     location: 'Tehran, Iran',
     social: {
-      github: 'https://github.com/yourusername',
-      linkedin: 'https://linkedin.com/in/yourusername',
-      telegram: 'https://t.me/yourusername',
+      github: 'https://github.com/ART1377',
+      linkedin: 'https://www.linkedin.com/in/alireza-tahavori',
+      telegram: 'https://t.me/ART_1377',
     },
   },
   fa: {
-    email: 'your.email@example.com',
-    phone: '+98 912 345 6789',
-    location: 'تهران، ایران',
+    email: 'alirezatt705@gmail.com',
+    phone: '+98 919 305 0762',
+    location: 'ایران تهران',
     social: {
-      github: 'https://github.com/yourusername',
-      linkedin: 'https://linkedin.com/in/yourusername',
-      telegram: 'https://t.me/yourusername',
+      github: 'https://github.com/ART1377',
+      linkedin: 'https://www.linkedin.com/in/alireza-tahavori',
+      telegram: 'https://t.me/ART_1377',
     },
   },
 };

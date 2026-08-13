@@ -1,12 +1,11 @@
 'use client';
 
-import { useState } from 'react';
-
 import { motion } from 'framer-motion';
 import { Check } from 'lucide-react';
 
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent } from '@/components/ui/card';
+import { useTilt } from '@/hooks/use-tilt';
 import { cn } from '@/lib/utils';
 
 type AboutTextBlockProps = {
@@ -16,18 +15,7 @@ type AboutTextBlockProps = {
 };
 
 const AboutTextBlock = ({ description, skills, isInView }: AboutTextBlockProps) => {
-  const [tilt, setTilt] = useState({ rx: 0, ry: 0, t: '0,0,0' });
-
-  const handleMove = (e: React.MouseEvent<HTMLDivElement>) => {
-    const rect = e.currentTarget.getBoundingClientRect();
-    const px = (e.clientX - rect.left) / rect.width;
-    const py = (e.clientY - rect.top) / rect.height;
-    const ry = (px - 0.5) * 10;
-    const rx = (0.5 - py) * 10;
-    setTilt({ rx, ry, t: `${(px - 0.5) * 12}px, ${(py - 0.5) * 12}px, 0` });
-  };
-
-  const handleLeave = () => setTilt({ rx: 0, ry: 0, t: '0,0,0' });
+  const { handleMouseMove, handleMouseLeave, style } = useTilt();
 
   return (
     <motion.div
@@ -38,12 +26,9 @@ const AboutTextBlock = ({ description, skills, isInView }: AboutTextBlockProps) 
     >
       <Card
         className={cn('relative overflow-hidden rounded-2xl transition-shadow hover:shadow-lg')}
-        onMouseMove={handleMove}
-        onMouseLeave={handleLeave}
-        style={{
-          transform: `perspective(1000px) rotateX(${tilt.rx}deg) rotateY(${tilt.ry}deg)`,
-          transformStyle: 'preserve-3d',
-        }}
+        onMouseMove={handleMouseMove}
+        onMouseLeave={handleMouseLeave}
+        style={style}
       >
         <CardContent className="relative p-6 md:p-8">
           <div className="text-foreground space-y-4">

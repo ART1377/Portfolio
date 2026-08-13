@@ -4,7 +4,7 @@ import { useRef } from 'react';
 
 import { useInView } from 'framer-motion';
 
-import { ParallaxContainer } from '@/components/parallax/section-parallax';
+import { ParallaxContainer } from '@/components/shared/parallax/section-parallax';
 
 import AboutFeatureCards from './feature-cards';
 import AboutHeader from './header';

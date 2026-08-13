@@ -7,8 +7,7 @@ import { Toaster } from 'sonner';
 
 import Footer from '@/components/layout/footer';
 import Navigation from '@/components/layout/navigation';
-import ParallaxBackground from '@/components/parallax/parallax-background';
-import Providers from '@/components/shared/providers';
+import ParallaxBackground from '@/components/shared/parallax/parallax-background';
 import ScrollProgress from '@/components/shared/scroll-progress';
 import ScrollToTop from '@/components/shared/scroll-to-top';
 import { routing } from '@/i18n/routing';
@@ -43,24 +42,19 @@ const LocaleLayout = async ({ children, params }: LocaleLayoutProps) => {
     notFound();
   }
 
-  setRequestLocale(locale);
-
   const dir = locale === 'fa' ? 'rtl' : 'ltr';
 
   return (
-    <html lang={locale} dir={dir} suppressHydrationWarning>
+    <html lang={locale} dir={dir}>
       <body>
         <NextIntlClientProvider locale={locale}>
-          <Providers>
-            <ParallaxBackground />
-            <ScrollProgress />
-            <ScrollToTop />
-            <Navigation />
-            <main>{children}</main>
-            <Footer />
-            <ScrollToTop />
-            <Toaster position="top-center" richColors />
-          </Providers>
+          <ParallaxBackground />
+          <ScrollProgress />
+          <Navigation />
+          <main className="relative">{children}</main>
+          <Footer />
+          <ScrollToTop />
+          <Toaster position="top-center" richColors />
         </NextIntlClientProvider>
       </body>
     </html>
