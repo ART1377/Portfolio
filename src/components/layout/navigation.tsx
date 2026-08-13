@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 
 import { useTranslations } from 'next-intl';
 
@@ -19,14 +19,17 @@ const Navigation = () => {
   const scrollFromTop = useScrollFromTop();
   const t = useTranslations('nav');
 
-  const navItems = [
-    { id: 'home', label: t('home'), icon: Home },
-    { id: 'about', label: t('about'), icon: User },
-    { id: 'skills', label: t('skills'), icon: Code },
-    { id: 'projects', label: t('projects'), icon: FolderGit2 },
-    { id: 'experience', label: t('experiences'), icon: Briefcase },
-    { id: 'contact', label: t('contact'), icon: Mail },
-  ];
+  const navItems = useMemo(
+    () => [
+      { id: 'home', label: t('home'), icon: Home },
+      { id: 'about', label: t('about'), icon: User },
+      { id: 'skills', label: t('skills'), icon: Code },
+      { id: 'projects', label: t('projects'), icon: FolderGit2 },
+      { id: 'experience', label: t('experiences'), icon: Briefcase },
+      { id: 'contact', label: t('contact'), icon: Mail },
+    ],
+    [t]
+  );
 
   // Scroll spy with IntersectionObserver
   useEffect(() => {
