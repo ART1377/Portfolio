@@ -1,13 +1,14 @@
-"use client";
+'use client';
 
-import { useRef, useMemo } from "react";
-import { motion, useScroll, useTransform } from "framer-motion";
+import { useMemo, useRef } from 'react';
+
+import { motion, useScroll, useTransform } from 'framer-motion';
 
 export function ParallaxParticles() {
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({
     target: ref,
-    offset: ["start end", "end start"],
+    offset: ['start end', 'end start'],
   });
 
   const particles = useMemo(
@@ -34,15 +35,12 @@ export function ParallaxParticles() {
   );
 
   return (
-    <div
-      ref={ref}
-      className="fixed inset-0 pointer-events-none overflow-hidden"
-    >
+    <div ref={ref} className="pointer-events-none fixed inset-0 overflow-hidden">
       {particles.map((particle, index) => {
         return (
           <motion.div
             key={particle.id}
-            className="absolute bg-primary/20 rounded-full"
+            className="bg-primary/20 absolute rounded-full"
             style={{
               left: `${particle.x}%`,
               top: `${particle.y}%`,
@@ -51,17 +49,13 @@ export function ParallaxParticles() {
               y: yTransforms[index],
             }}
             animate={{
-              opacity: [
-                particle.opacity,
-                particle.opacity * 2,
-                particle.opacity,
-              ],
+              opacity: [particle.opacity, particle.opacity * 2, particle.opacity],
               scale: [1, 1.2, 1],
             }}
             transition={{
               duration: 4 + particle.delay,
               repeat: Number.POSITIVE_INFINITY,
-              ease: "easeInOut",
+              ease: 'easeInOut',
               delay: particle.delay,
             }}
           />

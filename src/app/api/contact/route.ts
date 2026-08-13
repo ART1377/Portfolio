@@ -18,7 +18,7 @@ export const POST = async (request: NextRequest) => {
 
     const result = await sendContactEmail({
       name: validatedData.name,
-      email: validatedData.email, 
+      email: validatedData.email,
       subject: validatedData.subject,
       message: validatedData.message,
     });

@@ -27,9 +27,7 @@ const EducationCard = ({ edu }: EducationCardProps) => {
               {edu.school}
             </CardDescription>
           </div>
-          <Badge className="min-w-fit">
-            {edu.period}
-          </Badge>
+          <Badge className="min-w-fit">{edu.period}</Badge>
         </div>
       </CardHeader>
       <CardContent>

@@ -3,15 +3,7 @@
 import { useEffect, useState } from 'react';
 
 type ThemeMode = 'light' | 'dark' | 'system';
-type ColorScheme =
-  | 'blue'
-  | 'purple'
-  | 'green'
-  | 'orange'
-  | 'pink'
-  | 'teal'
-  | 'indigo'
-  | 'amber';
+type ColorScheme = 'blue' | 'purple' | 'green' | 'orange' | 'pink' | 'teal' | 'indigo' | 'amber';
 
 const COLOR_SCHEMES: ColorScheme[] = [
   'blue',

@@ -1,16 +1,11 @@
-import { cn } from "@/lib/utils";
+import { cn } from '@/lib/utils';
 
 interface SkeletonProps {
   className?: string;
 }
 
 const Skeleton = ({ className }: SkeletonProps) => {
-  return (
-    <div
-      className={cn("animate-pulse rounded-md bg-muted", className)}
-      aria-hidden="true"
-    />
-  );
+  return <div className={cn('bg-muted animate-pulse rounded-md', className)} aria-hidden="true" />;
 };
 
 export const ProjectCardSkeleton = () => {

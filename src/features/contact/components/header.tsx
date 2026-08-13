@@ -3,6 +3,7 @@
 import { useTranslations } from 'next-intl';
 
 import { motion } from 'framer-motion';
+
 import SectionHeader from '@/components/shared/section-header';
 
 type ContactHeaderProps = {

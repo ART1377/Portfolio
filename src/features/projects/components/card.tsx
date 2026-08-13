@@ -1,13 +1,13 @@
 'use client';
 
 import { useState } from 'react';
+import { FaGithub } from 'react-icons/fa';
 
 import { useTranslations } from 'next-intl';
 import Image from 'next/image';
 
 import { motion } from 'framer-motion';
 import { ExternalLink } from 'lucide-react';
-import { FaGithub } from 'react-icons/fa';
 
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';

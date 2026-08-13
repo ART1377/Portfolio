@@ -4,10 +4,10 @@ import { useLocale, useTranslations } from 'next-intl';
 
 import { motion } from 'framer-motion';
 
+import Typewriter from '@/components/shared/typewriter';
 import type { HeroData } from '@/data/profile';
 
 import { itemVariants } from '../constants';
-import Typewriter from '@/components/shared/typewriter';
 
 type HeroIntroProps = {
   hero: HeroData;

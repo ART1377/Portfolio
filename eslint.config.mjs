@@ -1,8 +1,8 @@
 // eslint.config.mjs
-import { defineConfig, globalIgnores } from "eslint/config";
-import nextVitals from "eslint-config-next/core-web-vitals";
-import nextTs from "eslint-config-next/typescript";
-import unusedImports from "eslint-plugin-unused-imports";
+import nextVitals from 'eslint-config-next/core-web-vitals';
+import nextTs from 'eslint-config-next/typescript';
+import unusedImports from 'eslint-plugin-unused-imports';
+import { defineConfig, globalIgnores } from 'eslint/config';
 
 const eslintConfig = defineConfig([
   ...nextVitals,
@@ -10,32 +10,32 @@ const eslintConfig = defineConfig([
   // Override default ignores of eslint-config-next.
   globalIgnores([
     // Default ignores of eslint-config-next:
-    ".next/**",
-    "out/**",
-    "build/**",
-    "next-env.d.ts",
+    '.next/**',
+    'out/**',
+    'build/**',
+    'next-env.d.ts',
   ]),
   {
     plugins: {
-      "unused-imports": unusedImports,
+      'unused-imports': unusedImports,
     },
     rules: {
-      "unused-imports/no-unused-imports": "error",
-      "unused-imports/no-unused-vars": [
-        "warn",
+      'unused-imports/no-unused-imports': 'error',
+      'unused-imports/no-unused-vars': [
+        'warn',
         {
-          vars: "all",
-          varsIgnorePattern: "^_",
-          args: "after-used",
-          argsIgnorePattern: "^_",
+          vars: 'all',
+          varsIgnorePattern: '^_',
+          args: 'after-used',
+          argsIgnorePattern: '^_',
         },
       ],
-      "@typescript-eslint/no-explicit-any": "error",
-      "react/function-component-definition": [
-        "error",
+      '@typescript-eslint/no-explicit-any': 'error',
+      'react/function-component-definition': [
+        'error',
         {
-          namedComponents: "arrow-function",
-          unnamedComponents: "arrow-function",
+          namedComponents: 'arrow-function',
+          unnamedComponents: 'arrow-function',
         },
       ],
     },

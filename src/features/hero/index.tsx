@@ -1,5 +1,6 @@
-import type { Locale } from '@/i18n/routing';
 import { profileData } from '@/data/profile';
+import type { Locale } from '@/i18n/routing';
+
 import HeroContent from './components/content';
 
 type HeroProps = {

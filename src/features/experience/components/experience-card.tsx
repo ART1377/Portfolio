@@ -27,9 +27,7 @@ const ExperienceCard = ({ exp }: ExperienceCardProps) => {
               {exp.company}
             </CardDescription>
           </div>
-          <Badge className="min-w-fit">
-            {exp.period}
-          </Badge>
+          <Badge className="min-w-fit">{exp.period}</Badge>
         </div>
       </CardHeader>
       <CardContent>

@@ -1,12 +1,12 @@
-export const LOCALES = ["en", "fa"] as const;
-export const DEFAULT_LOCALE = "en";
+export const LOCALES = ['en', 'fa'] as const;
+export const DEFAULT_LOCALE = 'en';
 
 export const SECTION_IDS = {
-  HERO: "hero",
-  ABOUT: "about",
-  PROJECTS: "projects",
-  SKILLS: "skills",
-  CONTACT: "contact",
+  HERO: 'hero',
+  ABOUT: 'about',
+  PROJECTS: 'projects',
+  SKILLS: 'skills',
+  CONTACT: 'contact',
 } as const;
 
 export const ANIMATION_DURATION = 0.6;
