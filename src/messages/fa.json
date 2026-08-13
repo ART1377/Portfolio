@@ -23,7 +23,8 @@
     "getInTouch": "ارتباط با من",
     "downloadResume": "دانلود رزومه",
     "resumeEn": "رزومه (انگلیسی)",
-    "resumeFa": "رزومه (فارسی)"
+    "resumeFa": "رزومه (فارسی)",
+    "resumeNote": "زبان مورد نظر خود را انتخاب کنید"
   },
   "about": {
     "title": "درباره من",

@@ -23,7 +23,8 @@
     "getInTouch": "Get In Touch",
     "downloadResume": "Download Resume",
     "resumeEn": "Resume (EN)",
-    "resumeFa": "Resume (FA)"
+    "resumeFa": "Resume (FA)",
+    "resumeNote": "Choose your preferred language"
   },
   "about": {
     "title": "About Me",
