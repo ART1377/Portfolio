@@ -1,43 +1,48 @@
 'use client';
 
-import { useMemo, useRef } from 'react';
+import { useRef, useState } from 'react';
 
 import { motion, useScroll, useTransform } from 'framer-motion';
 
-export function ParallaxParticles() {
-  const ref = useRef(null);
+type Particle = {
+  id: number;
+  x: number;
+  y: number;
+  size: number;
+  opacity: number;
+  delay: number;
+};
+
+const generateParticles = (): Particle[] =>
+  Array.from({ length: 50 }, (_, i) => ({
+    id: i,
+    x: Math.random() * 100,
+    y: Math.random() * 100,
+    size: Math.random() * 3 + 1,
+    opacity: Math.random() * 0.3 + 0.1,
+    delay: Math.random() * 5,
+  }));
+
+const ParallaxParticles = () => {
+  const ref = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
     target: ref,
     offset: ['start end', 'end start'],
   });
 
-  const particles = useMemo(
-    () =>
-      Array.from({ length: 50 }, (_, i) => ({
-        id: i,
-        x: Math.random() * 100,
-        y: Math.random() * 100,
-        size: Math.random() * 3 + 1,
-        speed: Math.random() * 0.5 + 0.2,
-        opacity: Math.random() * 0.3 + 0.1,
-        delay: Math.random() * 5,
-      })),
-    []
-  );
+  const y = useTransform(scrollYProgress, [0, 1], [0, -200]);
 
-  // FIX: useMemo to call hooks at the top level
-  const yTransforms = useMemo(
-    () =>
-      particles.map((particle) =>
-        useTransform(scrollYProgress, [0, 1], [0, -200 * particle.speed])
-      ),
-    [particles, scrollYProgress]
-  );
+  const [particles] = useState(() => {
+    if (typeof window === 'undefined') return [];
+    return generateParticles();
+  });
+
+  if (particles.length === 0) return null;
 
   return (
     <div ref={ref} className="pointer-events-none fixed inset-0 overflow-hidden">
-      {particles.map((particle, index) => {
-        return (
+      <motion.div className="absolute inset-0" style={{ y }}>
+        {particles.map((particle) => (
           <motion.div
             key={particle.id}
             className="bg-primary/20 absolute rounded-full"
@@ -46,7 +51,6 @@ export function ParallaxParticles() {
               top: `${particle.y}%`,
               width: particle.size,
               height: particle.size,
-              y: yTransforms[index], // ← bind transform directly
             }}
             animate={{
               opacity: [particle.opacity, particle.opacity * 2, particle.opacity],
@@ -54,13 +58,15 @@ export function ParallaxParticles() {
             }}
             transition={{
               duration: 4 + particle.delay,
-              repeat: Number.POSITIVE_INFINITY,
+              repeat: Infinity,
               ease: 'easeInOut',
               delay: particle.delay,
             }}
           />
-        );
-      })}
+        ))}
+      </motion.div>
     </div>
   );
-}
+};
+
+export default ParallaxParticles;
