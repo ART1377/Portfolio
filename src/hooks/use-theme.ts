@@ -2,8 +2,9 @@
 
 import { useEffect, useState } from 'react';
 
-type ThemeMode = 'light' | 'dark' | 'system';
-type ColorScheme = 'blue' | 'purple' | 'green' | 'orange' | 'pink' | 'teal' | 'indigo' | 'amber';
+export type ThemeMode = 'light' | 'dark' | 'system';
+export type ColorScheme =
+  'blue' | 'purple' | 'green' | 'orange' | 'pink' | 'teal' | 'indigo' | 'amber';
 
 const getStoredMode = (): ThemeMode => {
   if (typeof window === 'undefined') return 'system';

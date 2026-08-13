@@ -10,7 +10,7 @@ import { Check, Monitor, Moon, Palette, Settings, Sun } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { useClickOutside } from '@/hooks/use-click-outside';
-import { useTheme } from '@/hooks/use-theme';
+import { type ColorScheme, type ThemeMode, useTheme } from '@/hooks/use-theme';
 import { cn } from '@/lib/utils';
 
 const colorSchemes = [
@@ -30,26 +30,18 @@ type ThemeSwitcherProps = {
 
 const ThemeSwitcher = ({ placement = 'bottom' }: ThemeSwitcherProps) => {
   const [isOpen, setIsOpen] = useState(false);
-  const { mode, colorScheme, setThemeMode, setThemeColorScheme, mounted } = useTheme();
+  const { mode, colorScheme, setThemeMode, setThemeColorScheme } = useTheme();
   const t = useTranslations('theme');
 
   const menuRef = useRef<HTMLDivElement>(null);
   const buttonRef = useRef<HTMLButtonElement>(null);
   useClickOutside([menuRef, buttonRef], () => setIsOpen(false), isOpen);
 
-  const modeOptions = [
+  const modeOptions: { value: ThemeMode; label: string; icon: typeof Sun }[] = [
     { value: 'light', label: t('options.light'), icon: Sun },
     { value: 'dark', label: t('options.dark'), icon: Moon },
     { value: 'system', label: t('options.system'), icon: Monitor },
   ];
-
-  if (!mounted) {
-    return (
-      <Button variant="ghost" size="icon" className="h-9 w-9">
-        <div className="bg-muted h-4 w-4 animate-pulse rounded-full" />
-      </Button>
-    );
-  }
 
   return (
     <div className="relative">
@@ -95,7 +87,7 @@ const ThemeSwitcher = ({ placement = 'bottom' }: ThemeSwitcherProps) => {
                         key={option.value}
                         variant={isActive ? 'default' : 'outline'}
                         size="sm"
-                        onClick={() => setThemeMode(option.value as any)}
+                        onClick={() => setThemeMode(option.value)}
                         className={cn(
                           'h-auto flex-col gap-1 py-2',
                           isActive ? 'cursor-default' : 'cursor-pointer'
@@ -118,7 +110,7 @@ const ThemeSwitcher = ({ placement = 'bottom' }: ThemeSwitcherProps) => {
                         <button
                           key={scheme.id}
                           type="button"
-                          onClick={() => setThemeColorScheme(scheme.id as any)}
+                          onClick={() => setThemeColorScheme(scheme.id as ColorScheme)}
                           title={t(`schemes.${scheme.id}.name`)}
                           aria-label={t(`schemes.${scheme.id}.name`)}
                           aria-pressed={isActive}
