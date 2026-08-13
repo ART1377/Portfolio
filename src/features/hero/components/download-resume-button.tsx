@@ -33,7 +33,7 @@ const DownloadResumeButton = () => {
 
         <div className="p-2">
           <motion.a
-            href="/resume/AlirezaTahavori-EN.pdf"
+            href="/resume/AlirezaTahavori-en.pdf"
             target="_blank"
             rel="noopener noreferrer"
             className="group/item hover:bg-primary/10 flex items-center gap-3 rounded-lg px-3 py-3 transition-colors"
@@ -51,7 +51,7 @@ const DownloadResumeButton = () => {
           </motion.a>
 
           <motion.a
-            href="/resume/AlirezaTahavori-FA.pdf"
+            href="/resume/AlirezaTahavori-fa.pdf"
             target="_blank"
             rel="noopener noreferrer"
             className="group/item hover:bg-primary/10 flex items-center gap-3 rounded-lg px-3 py-3 transition-colors"
