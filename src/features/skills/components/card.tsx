@@ -43,10 +43,6 @@ const categoryIcons: Record<string, LucideIcon> = {
   databases: Database,
 };
 
-const getCategoryIcon = (title: string): LucideIcon => {
-  return categoryIcons[title.toLowerCase()] || LayoutDashboard;
-};
-
 const SkillCard = ({ category, index, isInView }: SkillCardProps) => {
   const { handleMouseMove, handleMouseLeave, style } = useTilt();
 
