@@ -1,6 +1,6 @@
 'use client';
 
-import { useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 import { motion, useScroll, useTransform } from 'framer-motion';
 
@@ -32,10 +32,14 @@ const ParallaxParticles = () => {
 
   const y = useTransform(scrollYProgress, [0, 1], [0, -200]);
 
-  const [particles] = useState(() => {
-    if (typeof window === 'undefined') return [];
-    return generateParticles();
-  });
+  const [particles, setParticles] = useState<Particle[]>([]);
+
+  useEffect(() => {
+    const raf = requestAnimationFrame(() => {
+      setParticles(generateParticles());
+    });
+    return () => cancelAnimationFrame(raf);
+  }, []);
 
   if (particles.length === 0) return null;
 

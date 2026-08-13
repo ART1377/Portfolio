@@ -1,6 +1,6 @@
 'use client';
 
-import { useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 import { motion, useScroll, useTransform } from 'framer-motion';
 
@@ -40,11 +40,14 @@ const ParallaxBackground = () => {
   const opacity1 = useTransform(scrollYProgress, [0, 0.3, 0.7, 1], [0.1, 0.3, 0.3, 0.1]);
   const opacity2 = useTransform(scrollYProgress, [0, 0.2, 0.8, 1], [0.05, 0.2, 0.2, 0.05]);
 
-  // Lazy initializer with client check – no setState in effect
-  const [dots] = useState(() => {
-    if (typeof window === 'undefined') return [];
-    return generateDots();
-  });
+  const [dots, setDots] = useState<Dot[]>([]);
+
+  useEffect(() => {
+    const raf = requestAnimationFrame(() => {
+      setDots(generateDots());
+    });
+    return () => cancelAnimationFrame(raf);
+  }, []);
 
   return (
     <div ref={ref} className="pointer-events-none fixed inset-0 -z-10 overflow-hidden">
