@@ -27,37 +27,31 @@ type SkillCardProps = {
   isInView: boolean;
 };
 
+// Static mapping – declared OUTSIDE component
+const categoryIcons: Record<string, LucideIcon> = {
+  frontend: Code,
+  فرانت‌اند: Code,
+  backend: Server,
+  بک‌اند: Server,
+  'cloud & devops': Cloud,
+  'data science': BarChart,
+  tools: Settings,
+  ابزارها: Settings,
+  'version control': GitBranch,
+  design: Palette,
+  'ai/ml': BrainCircuit,
+  databases: Database,
+};
+
 const getCategoryIcon = (title: string): LucideIcon => {
-  switch (title.toLowerCase()) {
-    case 'frontend':
-    case 'فرانت‌اند':
-      return Code;
-    case 'backend':
-    case 'بک‌اند':
-      return Server;
-    case 'cloud & devops':
-      return Cloud;
-    case 'data science':
-      return BarChart;
-    case 'tools':
-    case 'ابزارها':
-      return Settings;
-    case 'version control':
-      return GitBranch;
-    case 'design':
-      return Palette;
-    case 'ai/ml':
-      return BrainCircuit;
-    case 'databases':
-      return Database;
-    default:
-      return LayoutDashboard;
-  }
+  return categoryIcons[title.toLowerCase()] || LayoutDashboard;
 };
 
 const SkillCard = ({ category, index, isInView }: SkillCardProps) => {
   const { handleMouseMove, handleMouseLeave, style } = useTilt();
-  const Icon = getCategoryIcon(category.title);
+
+  // Directly get the icon component from static map
+  const Icon = categoryIcons[category.title.toLowerCase()] || LayoutDashboard;
 
   return (
     <motion.div

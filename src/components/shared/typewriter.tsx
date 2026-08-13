@@ -61,7 +61,9 @@ const Typewriter = ({
       }, deletingSpeed);
     } else if (isDeleting && displayedText.length === 0) {
       // After deleting, wait before typing next word
-      setIsWaitingAfterDelete(true);
+      timeout = setTimeout(() => {
+        setIsWaitingAfterDelete(true);
+      }, 0);
     }
 
     return () => clearTimeout(timeout);
