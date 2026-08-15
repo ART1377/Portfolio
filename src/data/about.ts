@@ -13,18 +13,19 @@ export type AboutData = {
 export const aboutData: Record<'en' | 'fa', AboutData> = {
   en: {
     description: [
-      'I am a passionate frontend developer with a strong focus on building modern, responsive, and performant web applications.',
-      'Over the years, I have honed my skills in React, Next.js, and TypeScript, delivering high-quality user experiences that balance aesthetics and functionality.',
-      'I believe in writing clean, maintainable code and staying up-to-date with the latest industry trends and best practices.',
+      'Front-end developer with hands-on experience building responsive, user-friendly web applications. Skilled in modern frameworks and best practices, with a strong passion for creating clean, efficient code.',
+      'Eager to keep learning, adapt to new technologies, and contribute to building impactful products as part of your team.',
+      'I specialize in React, Next.js, and TypeScript, with experience in full-stack technologies like Node.js and Prisma.',
     ],
     skills: [
       'React',
       'Next.js',
       'TypeScript',
       'Tailwind CSS',
-      'Framer Motion',
+      'React Query',
+      'SWR',
       'Node.js',
-      'REST API',
+      'Prisma',
       'Git',
     ],
     features: [
@@ -32,51 +33,56 @@ export const aboutData: Record<'en' | 'fa', AboutData> = {
         icon: 'Code',
         title: 'Clean Code',
         description:
-          'Writing maintainable, scalable, and self-documenting code is my top priority.',
+          'Applying Clean Code principles and Design Patterns to write maintainable, scalable code.',
       },
       {
         icon: 'Palette',
         title: 'UI/UX Focused',
-        description: 'I create intuitive and visually appealing interfaces that delight users.',
+        description:
+          'Converting Figma designs into responsive, pixel-perfect, and user-friendly interfaces.',
       },
       {
         icon: 'Zap',
         title: 'Performance',
-        description: 'Optimizing for speed and efficiency to ensure a smooth experience.',
+        description:
+          'Optimizing applications for speed and efficiency using modern tools and best practices.',
       },
     ],
   },
   fa: {
     description: [
-      'من یک توسعه‌دهنده فرانت‌اند پرشور هستم که بر ساخت برنامه‌های وب مدرن، واکنش‌گرا و با کارایی بالا تمرکز دارم.',
-      'در طول سال‌ها، مهارت‌های خود را در React، Next.js و TypeScript تقویت کرده‌ام و تجربه‌های کاربری با کیفیتی ارائه می‌دهم که تعادل بین زیبایی و عملکرد را برقرار می‌کنند.',
-      'من به نوشتن کد تمیز و قابل نگهداری اعتقاد دارم و همیشه با آخرین روندها و بهترین شیوه‌های صنعت به‌روز هستم.',
+      'توسعه‌دهنده فرانت‌اند با تجربه عملی در ساخت برنامه‌های وب واکنش‌گرا و کاربرپسند. مسلط به فریم‌ورک‌های مدرن و بهترین شیوه‌ها، با علاقه‌مندی به نوشتن کد تمیز و بهینه.',
+      'مشتاق به یادگیری مداوم، تسلط بر تکنولوژی‌های جدید و آماده همکاری در ساخت محصولات باکیفیت به عنوان عضوی از تیم.',
+      'متخصص در React، Next.js و TypeScript با تجربه در تکنولوژی‌های فول‌استک مانند Node.js و Prisma.',
     ],
     skills: [
       'React',
       'Next.js',
       'TypeScript',
       'Tailwind CSS',
-      'Framer Motion',
+      'React Query',
+      'SWR',
       'Node.js',
-      'REST API',
+      'Prisma',
       'Git',
     ],
     features: [
       {
         icon: 'Code',
         title: 'کد تمیز',
-        description: 'نوشتن کد قابل نگهداری، مقیاس‌پذیر و خودمستند اولویت اصلی من است.',
+        description:
+          'استفاده از اصول Clean Code و Design Patterns برای نوشتن کد قابل نگهداری و مقیاس‌پذیر.',
       },
       {
         icon: 'Palette',
         title: 'تمرکز بر UI/UX',
-        description: 'رابط‌های کاربری بصری و جذابی ایجاد می‌کنم که کاربران را خوشحال می‌کند.',
+        description: 'تبدیل طراحی‌های Figma به رابط‌های واکنش‌گرا، دقیق و کاربرپسند.',
       },
       {
         icon: 'Zap',
         title: 'کارایی',
-        description: 'بهینه‌سازی سرعت و کارایی برای تجربه‌ای روان و لذت‌بخش.',
+        description:
+          'بهینه‌سازی برنامه‌ها برای سرعت و کارایی با استفاده از ابزارها و بهترین شیوه‌های مدرن.',
       },
     ],
   },

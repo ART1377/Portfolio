@@ -13,9 +13,9 @@ export type HeroData = {
 export const profileData: Record<'en' | 'fa', HeroData> = {
   en: {
     name: 'Alireza Tahavori',
-    initials: 'ART',
-    bio: 'Frontend Developer crafting modern web experiences with React, Next.js, and TypeScript.',
-    roles: ['React Developer', 'Next.js Expert', 'UI/UX Enthusiast'],
+    initials: 'AT',
+    bio: 'Front-end Developer with hands-on experience building responsive, user-friendly web applications using React, Next.js, and TypeScript.',
+    roles: ['React Developer', 'Next.js Developer', 'Front-end Engineer'],
     socials: {
       github: 'https://github.com/ART1377',
       linkedin: 'https://www.linkedin.com/in/alireza-tahavori',
@@ -25,8 +25,8 @@ export const profileData: Record<'en' | 'fa', HeroData> = {
   fa: {
     name: 'علیرضا تهوری',
     initials: 'ع',
-    bio: 'توسعه‌دهنده فرانت‌اند و طراح تجربه کاربری با React، Next.js و TypeScript.',
-    roles: ['توسعه‌دهنده React', 'متخصص Next.js', 'علاقه‌مند به UI/UX'],
+    bio: 'توسعه‌دهنده فرانت‌اند با تجربه عملی در ساخت برنامه‌های وب واکنش‌گرا و کاربرپسند با React، Next.js و TypeScript.',
+    roles: ['توسعه‌دهنده React', 'توسعه‌دهنده Next.js', 'مهندس فرانت‌اند'],
     socials: {
       github: 'https://github.com/ART1377',
       linkedin: 'https://www.linkedin.com/in/alireza-tahavori',

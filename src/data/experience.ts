@@ -29,38 +29,52 @@ export const experienceData: Record<'en' | 'fa', ExperienceData> = {
   en: {
     experiences: [
       {
-        title: 'Frontend Developer',
-        company: 'TechCorp',
-        period: '2023 – Present',
+        title: 'Front-end Developer',
+        company: 'Dadeh Pardaz Novin',
+        period: 'Feb 2025 – Present',
         description:
-          'Building modern web applications with React, Next.js, and TypeScript. Led migration to App Router and improved performance scores.',
-        technologies: ['React', 'Next.js', 'TypeScript', 'Tailwind CSS'],
+          'Worked with Next.js, TypeScript, React Query, and SWR. Applied Clean Code principles and Design Patterns. Converted Figma designs into responsive, functional code.',
+        technologies: ['Next.js', 'TypeScript', 'React Query', 'SWR'],
       },
       {
-        title: 'Junior Web Developer',
-        company: 'WebStudio',
-        period: '2021 – 2023',
+        title: 'Front-end Developer',
+        company: 'Manzoome Negaran',
+        period: 'Oct 2023 – Oct 2024',
         description:
-          'Developed responsive websites and e-commerce platforms. Collaborated with design team to implement UI/UX improvements.',
-        technologies: ['HTML', 'CSS', 'JavaScript', 'React'],
+          'Built UIs using TailwindCSS and JavaScript, converting Figma designs. Developed travel agency websites: Nakhoda Travel and Ana Parvaz.',
+        technologies: ['TailwindCSS', 'JavaScript', 'Figma'],
+      },
+      {
+        title: 'Front-end Developer',
+        company: 'Nasr Telecommunications',
+        period: 'Feb 2023 – Jul 2023',
+        description:
+          'Working with Next.js, Bootstrap, React, and Figma. Converting Figma designs into code and building UI components.',
+        technologies: ['Next.js', 'React', 'Bootstrap', 'Figma'],
       },
     ],
     education: [
       {
-        degree: 'Bachelor of Computer Science',
-        school: 'University of Technology',
-        period: '2017 – 2021',
-        description: 'Focused on software engineering, algorithms, and web technologies.',
+        degree: "Bachelor's in Computer Engineering",
+        school: 'University of Tehran South',
+        period: '2018 – 2022',
+        description:
+          'Studied computer engineering with focus on software development and web technologies.',
       },
     ],
     courses: [
       {
-        name: 'Advanced React and Next.js',
-        org: 'Frontend Masters',
+        name: 'Next.js & React – Complete Guide',
+        org: 'Udemy',
+        year: '2023',
+      },
+      {
+        name: 'React – Complete Guide',
+        org: 'Udemy',
         year: '2022',
       },
       {
-        name: 'TypeScript for Professionals',
+        name: 'Complete JavaScript Course',
         org: 'Udemy',
         year: '2021',
       },
@@ -70,37 +84,50 @@ export const experienceData: Record<'en' | 'fa', ExperienceData> = {
     experiences: [
       {
         title: 'توسعه‌دهنده فرانت‌اند',
-        company: 'تک‌کورپ',
-        period: '۱۴۰۲ – اکنون',
+        company: 'شرکت داده‌پرداز نوین',
+        period: 'بهمن ۱۴۰۳ – اکنون',
         description:
-          'ساخت برنامه‌های وب مدرن با React، Next.js و TypeScript. رهبری مهاجرت به App Router و بهبود امتیازات عملکرد.',
-        technologies: ['React', 'Next.js', 'TypeScript', 'Tailwind CSS'],
+          'کار با Next.js، TypeScript، React Query و SWR. استفاده از اصول Clean Code و Design Patterns. تبدیل طراحی‌های Figma به کدهای واکنش‌گرا و کاربردی.',
+        technologies: ['Next.js', 'TypeScript', 'React Query', 'SWR'],
       },
       {
-        title: 'توسعه‌دهنده وب',
-        company: 'وب‌استودیو',
-        period: '۱۴۰۰ – ۱۴۰۲',
+        title: 'توسعه‌دهنده فرانت‌اند',
+        company: 'شرکت منظومه‌نگاران',
+        period: 'آبان ۱۴۰۲ – آبان ۱۴۰۳',
         description:
-          'توسعه وب‌سایت‌های واکنش‌گرا و پلتفرم‌های فروشگاهی. همکاری با تیم طراحی برای بهبود UI/UX.',
-        technologies: ['HTML', 'CSS', 'JavaScript', 'React'],
+          'ساخت رابط‌های کاربری با TailwindCSS و JavaScript و تبدیل طراحی‌های Figma به کد. توسعه وب‌سایت آژانس‌های مسافرتی ناخدا تراول و آنا پرواز.',
+        technologies: ['TailwindCSS', 'JavaScript', 'Figma'],
+      },
+      {
+        title: 'توسعه‌دهنده فرانت‌اند',
+        company: 'شرکت مخابرات و الکترونیک نصر',
+        period: 'مرداد ۱۴۰۱ – اسفند ۱۴۰۱',
+        description:
+          'کار با Next.js، Bootstrap، React و Figma. تبدیل طراحی‌های Figma به کد و ساخت کامپوننت‌های رابط کاربری.',
+        technologies: ['Next.js', 'React', 'Bootstrap', 'Figma'],
       },
     ],
     education: [
       {
-        degree: 'کارشناسی علوم کامپیوتر',
-        school: 'دانشگاه صنعتی',
-        period: '۱۳۹۶ – ۱۴۰۰',
-        description: 'تمرکز بر مهندسی نرم‌افزار، الگوریتم‌ها و فناوری‌های وب.',
+        degree: 'کارشناسی مهندسی کامپیوتر',
+        school: 'دانشگاه تهران جنوب',
+        period: '۱۳۹۷ – ۱۴۰۱',
+        description: 'تحصیل در رشته مهندسی کامپیوتر با تمرکز بر توسعه نرم‌افزار و فناوری‌های وب.',
       },
     ],
     courses: [
       {
-        name: 'React و Next.js پیشرفته',
-        org: 'Frontend Masters',
+        name: 'راهنمای کامل Next.js و React',
+        org: 'Udemy',
+        year: '۱۴۰۲',
+      },
+      {
+        name: 'راهنمای کامل React',
+        org: 'Udemy',
         year: '۱۴۰۱',
       },
       {
-        name: 'TypeScript برای حرفه‌ای‌ها',
+        name: 'دوره کامل JavaScript',
         org: 'Udemy',
         year: '۱۴۰۰',
       },
