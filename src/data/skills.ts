@@ -55,7 +55,6 @@ export const skillsData: Record<'en' | 'fa', SkillCategory[]> = {
         { name: 'Tailwind CSS', level: 95 },
         { name: 'Redux Toolkit', level: 80 },
         { name: 'React Query', level: 75 },
-        { name: 'SWR', level: 70 },
       ],
     },
     {
@@ -79,7 +78,7 @@ export const skillsData: Record<'en' | 'fa', SkillCategory[]> = {
         { name: 'React Hook Form', level: 75 },
         { name: 'Zod', level: 70 },
         { name: 'Axios', level: 80 },
-        { name: 'Swiper', level: 65 },
+        { name: 'SWR', level: 70 },
       ],
     },
   ],
