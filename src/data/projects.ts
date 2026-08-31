@@ -15,6 +15,39 @@ export type Project = {
 export const projectsData: Record<'en' | 'fa', Project[]> = {
   en: [
     {
+      title: 'Voyage Travel Booking',
+      description:
+        'A bilingual travel booking platform with hotel/flight search, booking flow, admin workspace, real-time notifications, and analytics dashboard.',
+      longDescription:
+        'Voyage is a full-stack travel booking platform featuring hotel and flight search with URL-driven filters, complete booking flow with guest details and payment simulation, full admin workspace for managing hotels, flights, users, and bookings, real-time notifications via Pusher, business analytics dashboard with revenue tracking, Cloudinary media upload, bilingual English/Persian support with full RTL, and role-based access control.',
+      image: '/images/projects/voyage-1.png',
+      images: [
+        '/images/projects/voyage-1.png',
+        '/images/projects/voyage-2.png',
+        '/images/projects/voyage-3.png',
+        '/images/projects/voyage-4.png',
+        '/images/projects/voyage-5.png',
+        '/images/projects/voyage-6.png',
+      ],
+      technologies: [
+        'Next.js',
+        'TypeScript',
+        'Prisma',
+        'PostgreSQL',
+        'Pusher',
+        'Tailwind CSS',
+        'shadcn/ui',
+        'React Query',
+        'React Hook Form',
+        'Zod',
+        'Cloudinary',
+      ],
+      liveUrl: 'https://voyage-amber-ten.vercel.app/',
+      githubUrl: 'https://github.com/ART1377/voyage-travel-booking',
+      featured: true,
+      year: 2026,
+    },
+    {
       title: 'Task Manager Pro',
       description:
         'A full-stack project management app with Kanban board, real-time chat, RBAC, and analytics dashboard.',
@@ -47,7 +80,7 @@ export const projectsData: Record<'en' | 'fa', Project[]> = {
       liveUrl: 'https://task-manager-seven-nine.vercel.app/dashboard',
       githubUrl: 'https://github.com/ART1377/Task-Manager',
       featured: true,
-      year: 2025,
+      year: 2026,
     },
     {
       title: 'Full-stack E-commerce Website',
@@ -109,6 +142,39 @@ export const projectsData: Record<'en' | 'fa', Project[]> = {
   ],
   fa: [
     {
+      title: 'ویاژ - سامانه رزرو سفر',
+      description:
+        'پلتفرم دوزبانه رزرو سفر با جست‌وجوی هتل و پرواز، فرایند رزرو، پنل مدیریت، اعلان‌های بی‌درنگ و داشبورد تحلیلی.',
+      longDescription:
+        'ویاژ یک پلتفرم فول‌استک رزرو سفر است که شامل جست‌وجو و فیلتر هتل و پرواز با فیلترهای مبتنی بر URL، فرایند کامل رزرو با اطلاعات مهمان و شبیه‌سازی پرداخت، پنل مدیریت کامل برای مدیریت هتل‌ها، پروازها، کاربران و رزروها، اعلان‌های بی‌درنگ با Pusher، داشبورد تحلیلی با ردیابی درآمد، آپلود تصویر با Cloudinary، پشتیبانی دوزبانه انگلیسی/فارسی با RTL کامل و کنترل دسترسی نقش‌محور است.',
+      image: '/images/projects/voyage-1.png',
+      images: [
+        '/images/projects/voyage-1.png',
+        '/images/projects/voyage-2.png',
+        '/images/projects/voyage-3.png',
+        '/images/projects/voyage-4.png',
+        '/images/projects/voyage-5.png',
+        '/images/projects/voyage-6.png',
+      ],
+      technologies: [
+        'Next.js',
+        'TypeScript',
+        'Prisma',
+        'PostgreSQL',
+        'Pusher',
+        'Tailwind CSS',
+        'shadcn/ui',
+        'React Query',
+        'React Hook Form',
+        'Zod',
+        'Cloudinary',
+      ],
+      liveUrl: 'https://voyage-amber-ten.vercel.app/',
+      githubUrl: 'https://github.com/ART1377/voyage-travel-booking',
+      featured: true,
+      year: 2026,
+    },
+    {
       title: 'Task Manager Pro',
       description:
         'ابزار مدیریت پروژه فول‌استک با برد کانبان، چت بی‌درنگ، کنترل سطح دسترسی و داشبورد آماری.',
@@ -141,7 +207,7 @@ export const projectsData: Record<'en' | 'fa', Project[]> = {
       liveUrl: 'https://task-manager-seven-nine.vercel.app/dashboard',
       githubUrl: 'https://github.com/ART1377/Task-Manager',
       featured: true,
-      year: 2025,
+      year: 2026,
     },
     {
       title: 'فروشگاه اینترنتی فول‌استک',
