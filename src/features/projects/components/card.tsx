@@ -7,7 +7,7 @@ import { useTranslations } from 'next-intl';
 import Image from 'next/image';
 
 import { AnimatePresence, motion } from 'framer-motion';
-import { ExternalLink, Info } from 'lucide-react';
+import { ExternalLink, Info, Star } from 'lucide-react';
 
 import Portal from '@/components/shared/portal';
 import { Badge } from '@/components/ui/badge';
@@ -34,7 +34,9 @@ const ProjectCard = ({ project, index, isInView }: ProjectCardProps) => {
     <>
       <motion.div variants={cardVariants}>
         <Card
-          className="group h-full overflow-hidden wrap-break-word transition-shadow hover:shadow-lg"
+          className={`group h-full overflow-hidden wrap-break-word transition-shadow hover:shadow-lg ${
+            project.featured ? 'border-primary/50 border-2 shadow-md' : ''
+          }`}
           onMouseMove={handleMouseMove}
           onMouseLeave={handleMouseLeave}
           style={style}
@@ -50,6 +52,23 @@ const ProjectCard = ({ project, index, isInView }: ProjectCardProps) => {
               fill
               className="object-cover transition-transform duration-300 group-hover:scale-110"
             />
+
+            {project.featured && (
+              <motion.div
+                className="absolute top-3 left-3 z-10"
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.8 }}
+                transition={{ duration: 0.3, delay: 0.2 + index * 0.1 }}
+              >
+                <Badge
+                  variant="default"
+                  className="bg-primary hover:bg-primary flex items-center gap-1 text-white shadow-md"
+                >
+                  <Star className="h-3 w-3 fill-current" />
+                  <span className="text-xs font-semibold">{t('featured')}</span>
+                </Badge>
+              </motion.div>
+            )}
 
             {/* Hover overlay with action buttons */}
             <motion.div

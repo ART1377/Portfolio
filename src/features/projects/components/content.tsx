@@ -19,6 +19,12 @@ const ProjectsContent = ({ projects }: ProjectsContentProps) => {
   const ref = useRef<HTMLElement | null>(null);
   const isInView = useInView(ref, { once: true, margin: '-100px' });
 
+  const sortedProjects = [...projects].sort((a, b) => {
+    if (a.featured && !b.featured) return -1;
+    if (!a.featured && b.featured) return 1;
+    return 0;
+  });
+
   return (
     <section id="projects" className="py-20" ref={ref}>
       <div className="section-container">
@@ -30,7 +36,7 @@ const ProjectsContent = ({ projects }: ProjectsContentProps) => {
             initial="hidden"
             animate={isInView ? 'visible' : 'hidden'}
           >
-            {projects.map((project, index) => (
+            {sortedProjects.map((project, index) => (
               <ProjectCard
                 key={project.title}
                 project={project}
