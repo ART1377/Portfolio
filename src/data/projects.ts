@@ -15,7 +15,7 @@ export type Project = {
 export const projectsData: Record<'en' | 'fa', Project[]> = {
   en: [
     {
-      title: 'Voyage Travel Booking',
+      title: 'Voyage — Travel Booking Platform',
       description:
         'A bilingual travel booking platform with hotel/flight search, booking flow, admin workspace, real-time notifications, and analytics dashboard.',
       longDescription:
@@ -48,7 +48,7 @@ export const projectsData: Record<'en' | 'fa', Project[]> = {
       year: 2026,
     },
     {
-      title: 'Task Manager Pro',
+      title: 'Task Manager — Project Management',
       description:
         'A full-stack project management app with Kanban board, real-time chat, RBAC, and analytics dashboard.',
       longDescription:
@@ -83,7 +83,7 @@ export const projectsData: Record<'en' | 'fa', Project[]> = {
       year: 2026,
     },
     {
-      title: 'Full-stack E-commerce Website',
+      title: 'Humtto City — Full-stack E-commerce',
       description: 'Designed in Figma and built full Next.js storefront & admin panel.',
       longDescription:
         'A complete e-commerce solution with product management, cart, checkout, payment integration, and a robust admin panel. Features include user authentication, role-based access, image upload with Cloudinary, and state management with Redux Toolkit.',
@@ -110,8 +110,37 @@ export const projectsData: Record<'en' | 'fa', Project[]> = {
       featured: true,
       year: 2024,
     },
+
     {
-      title: 'Full-stack Portfolio',
+      title: 'Ana Parvaz - Travel Agency',
+      description:
+        'Mobile-first, accessible frontend for Ana Parvaz Iranian Travel Agency using Tailwind CSS and Vanilla JavaScript.',
+      longDescription:
+        'Built the frontend for Ana Parvaz Iranian Travel Agency using Tailwind CSS and Vanilla JavaScript. Converted Figma designs into interactive, responsive UI components and delivered production-ready interfaces under deadlines. Focused on a mobile-first and accessible experience, with close collaboration in a team environment.',
+      image: '/images/projects/ana-parvaz-1.png',
+      images: ['/images/projects/ana-parvaz-1.png'],
+      technologies: ['HTML5', 'CSS3', 'JavaScript', 'Tailwind CSS', 'Figma'],
+      liveUrl: 'https://www.ana-parvaz.ir/',
+      githubUrl: '',
+      featured: false,
+      year: 2024,
+    },
+    {
+      title: 'Nakhoda — Travel Agency',
+      description:
+        'Frontend development of a tourism website for Nakhoda Travel Agency with responsive, pixel-perfect UI.',
+      longDescription:
+        'Built the frontend of a tourism website for Nakhoda Travel Agency using HTML, CSS, JavaScript, and Tailwind CSS. Translated Figma designs into responsive, clean interfaces and collaborated with a team to ensure cross-browser compatibility and performance optimization. Focused on layout structure, component reusability, and pixel-perfect design.',
+      image: '/images/projects/nakhoda-1.png',
+      images: ['/images/projects/nakhoda-1.png'],
+      technologies: ['HTML5', 'CSS3', 'JavaScript', 'Tailwind CSS', 'Figma'],
+      liveUrl: 'https://nakhoda.travel/',
+      githubUrl: '',
+      featured: false,
+      year: 2024,
+    },
+    {
+      title: 'Portfolio — Full-stack Personal Website',
       description:
         'Building fullstack multilingual React/Next.js apps with TypeScript, TailwindCSS, Framer Motion, and Swiper.',
       longDescription:
@@ -175,7 +204,7 @@ export const projectsData: Record<'en' | 'fa', Project[]> = {
       year: 2026,
     },
     {
-      title: 'Task Manager Pro',
+      title: 'تسک منیجر — اپلیکیشن مدیریت پروژه',
       description:
         'ابزار مدیریت پروژه فول‌استک با برد کانبان، چت بی‌درنگ، کنترل سطح دسترسی و داشبورد آماری.',
       longDescription:
@@ -210,7 +239,7 @@ export const projectsData: Record<'en' | 'fa', Project[]> = {
       year: 2026,
     },
     {
-      title: 'فروشگاه اینترنتی فول‌استک',
+      title: 'هامتو سیتی — فروشگاه اینترنتی فول‌استک',
       description: 'طراحی شده در Figma و پیاده‌سازی کامل فروشگاه آنلاین و پنل ادمین با Next.js.',
       longDescription:
         'راه‌حل کامل تجارت الکترونیک با مدیریت محصولات، سبد خرید، تسویه حساب، درگاه پرداخت و پنل ادمین قدرتمند. شامل احراز هویت کاربران، کنترل دسترسی نقش‌محور، آپلود تصویر با Cloudinary و مدیریت state با Redux Toolkit.',
@@ -237,8 +266,37 @@ export const projectsData: Record<'en' | 'fa', Project[]> = {
       featured: true,
       year: 2024,
     },
+
     {
-      title: 'سایت Portfolio فول‌استک',
+      title: 'آناپرواز ایرانیان - آژانس مسافرتی',
+      description:
+        'فرانت‌اند موبایل-فرست و دسترس‌پذیر برای آژانس مسافرتی آناپرواز ایرانیان با Tailwind CSS و جاوااسکریپت.',
+      longDescription:
+        'فرانت‌اند آژانس مسافرتی آناپرواز ایرانیان را با Tailwind CSS و Vanilla JavaScript ساختم. طراحی‌های Figma را به کامپوننت‌های تعاملی و واکنش‌گرا تبدیل کردم و رابط‌های آماده‌ی تولید را در بازه‌های زمانی مشخص تحویل دادم. تمرکز روی تجربه موبایل-فرست، دسترس‌پذیری و همکاری تیمی بود.',
+      image: '/images/projects/ana-parvaz-1.png',
+      images: ['/images/projects/ana-parvaz-1.png'],
+      technologies: ['HTML5', 'CSS3', 'JavaScript', 'Tailwind CSS', 'Figma'],
+      liveUrl: 'https://www.ana-parvaz.ir/',
+      githubUrl: '',
+      featured: false,
+      year: 2024,
+    },
+    {
+      title: 'ناخدا - آژانس مسافرتی',
+      description:
+        'توسعه فرانت‌اند وب‌سایت گردشگری آژانس ناخدا با رابط کاربری واکنش‌گرا و پیاده‌سازی دقیق طراحی.',
+      longDescription:
+        'فرانت‌اند وب‌سایت گردشگری آژانس مسافرتی ناخدا را با HTML، CSS، JavaScript و Tailwind CSS پیاده‌سازی کردم. طراحی‌های Figma را به رابط‌های تمیز و واکنش‌گرا تبدیل کردم و برای اطمینان از سازگاری بین‌مرورگری و بهینه‌سازی عملکرد با تیم همکاری داشتم. تمرکز اصلی روی ساختار چیدمان، قابلیت استفاده مجدد از کامپوننت‌ها و پیاده‌سازی دقیق طراحی بود.',
+      image: '/images/projects/nakhoda-1.png',
+      images: ['/images/projects/nakhoda-1.png'],
+      technologies: ['HTML5', 'CSS3', 'JavaScript', 'Tailwind CSS', 'Figma'],
+      liveUrl: 'https://nakhoda.travel/',
+      githubUrl: '',
+      featured: false,
+      year: 2024,
+    },
+    {
+      title: 'پورتفولیو — وب‌سایت شخصی فول‌استک',
       description:
         'توسعه اپلیکیشن‌های فول‌استک چندزبانه با React/Next.js، همراه با TypeScript، TailwindCSS، Framer Motion.',
       longDescription:
