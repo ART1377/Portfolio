@@ -13,9 +13,9 @@ export type AboutData = {
 export const aboutData: Record<'en' | 'fa', AboutData> = {
   en: {
     description: [
-      'Front-end developer with hands-on experience building responsive, user-friendly web applications. Skilled in modern frameworks and best practices, with a strong passion for creating clean, efficient code.',
-      'Eager to keep learning, adapt to new technologies, and contribute to building impactful products as part of your team.',
-      'I specialize in React, Next.js, and TypeScript, with experience in full-stack technologies like Node.js and Prisma.',
+      'Frontend Developer with 3+ years of experience building responsive, production-ready web applications using React.js, Next.js, TypeScript, and Tailwind CSS.',
+      "I focus on clean architecture, reusable components, and performance optimization. I've built full-stack platforms including a bilingual travel booking system and a project management app with real-time features.",
+      'I specialize in React, Next.js, and TypeScript, with hands-on experience in full-stack tools like Node.js, Prisma, and PostgreSQL.',
     ],
     skills: [
       'React',
@@ -26,7 +26,10 @@ export const aboutData: Record<'en' | 'fa', AboutData> = {
       'SWR',
       'Node.js',
       'Prisma',
+      'PostgreSQL',
+      'REST APIs',
       'Git',
+      'Framer Motion',
     ],
     features: [
       {
@@ -51,9 +54,9 @@ export const aboutData: Record<'en' | 'fa', AboutData> = {
   },
   fa: {
     description: [
-      'توسعه‌دهنده فرانت‌اند با تجربه عملی در ساخت برنامه‌های وب واکنش‌گرا و کاربرپسند. مسلط به فریم‌ورک‌های مدرن و بهترین شیوه‌ها، با علاقه‌مندی به نوشتن کد تمیز و بهینه.',
-      'مشتاق به یادگیری مداوم، تسلط بر تکنولوژی‌های جدید و آماده همکاری در ساخت محصولات باکیفیت به عنوان عضوی از تیم.',
-      'متخصص در React، Next.js و TypeScript با تجربه در تکنولوژی‌های فول‌استک مانند Node.js و Prisma.',
+      'توسعه‌دهنده فرانت‌اند با بیش از ۳ سال تجربه در ساخت برنامه‌های وب واکنش‌گرا و آماده‌ی تولید با React.js، Next.js، TypeScript و Tailwind CSS.',
+      'تمرکز من روی معماری تمیز، کامپوننت‌های قابل استفاده مجدد و بهینه‌سازی عملکرد است. پلتفرم‌های فول‌استک از جمله یک سامانه رزرو سفر دوزبانه و یک اپلیکیشن مدیریت پروژه با قابلیت‌های بی‌درنگ ساخته‌ام.',
+      'متخصص در React، Next.js و TypeScript، با تجربه عملی در ابزارهای فول‌استک مانند Node.js، Prisma و PostgreSQL.',
     ],
     skills: [
       'React',
@@ -64,7 +67,10 @@ export const aboutData: Record<'en' | 'fa', AboutData> = {
       'SWR',
       'Node.js',
       'Prisma',
+      'PostgreSQL',
+      'REST APIs',
       'Git',
+      'Framer Motion',
     ],
     features: [
       {
