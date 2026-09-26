@@ -172,35 +172,6 @@ export const projectsData: Record<'en' | 'fa', Project[]> = {
       featured: false,
       year: 2024,
     },
-    {
-      title: 'Portfolio — Full-stack Personal Website',
-      description:
-        'Building fullstack multilingual React/Next.js apps with TypeScript, TailwindCSS, Framer Motion, and Swiper.',
-      longDescription:
-        'A personal portfolio with multilingual support (English/Persian), dark mode, animations, and a contact form. The backend is built with Node.js and Express, using Prisma ORM and SWR for data fetching.',
-      image: '/images/projects/portfolio-1.png',
-      images: [
-        '/images/projects/portfolio-1.png',
-        '/images/projects/portfolio-2.png',
-        '/images/projects/portfolio-3.png',
-        '/images/projects/portfolio-4.png',
-        '/images/projects/portfolio-5.png',
-      ],
-      technologies: [
-        'Next.js',
-        'TypeScript',
-        'TailwindCSS',
-        'Shadcn',
-        'SWR',
-        'Node.js',
-        'Express.js',
-        'Prisma',
-      ],
-      liveUrl: 'https://alireza-tahavori1.vercel.app/',
-      githubUrl: 'https://github.com/ART1377/portfolio-frontend',
-      featured: false,
-      year: 2025,
-    },
   ],
   fa: [
     {
@@ -360,35 +331,6 @@ export const projectsData: Record<'en' | 'fa', Project[]> = {
       githubUrl: '',
       featured: false,
       year: 2024,
-    },
-    {
-      title: 'پورتفولیو — وب‌سایت شخصی فول‌استک',
-      description:
-        'توسعه اپلیکیشن‌های فول‌استک چندزبانه با React/Next.js، همراه با TypeScript، TailwindCSS، Framer Motion.',
-      longDescription:
-        'نمونه‌کار شخصی با پشتیبانی چندزبانه (انگلیسی/فارسی)، حالت تاریک، انیمیشن‌ها و فرم تماس. بک‌اند با Node.js و Express ساخته شده و از Prisma ORM و SWR برای دریافت داده استفاده می‌کند.',
-      image: '/images/projects/portfolio-1.png',
-      images: [
-        '/images/projects/portfolio-1.png',
-        '/images/projects/portfolio-2.png',
-        '/images/projects/portfolio-3.png',
-        '/images/projects/portfolio-4.png',
-        '/images/projects/portfolio-5.png',
-      ],
-      technologies: [
-        'Next.js',
-        'TypeScript',
-        'TailwindCSS',
-        'Shadcn',
-        'SWR',
-        'Node.js',
-        'Express.js',
-        'Prisma',
-      ],
-      liveUrl: 'https://alireza-tahavori1.vercel.app/',
-      githubUrl: 'https://github.com/ART1377/portfolio-frontend',
-      featured: false,
-      year: 2025,
     },
   ],
 };
