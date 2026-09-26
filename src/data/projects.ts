@@ -83,6 +83,40 @@ export const projectsData: Record<'en' | 'fa', Project[]> = {
       year: 2026,
     },
     {
+      title: 'NovaStore — Modern E-commerce Platform',
+      description:
+        'A full-stack e-commerce platform with a complete admin workspace, atomic checkout with idempotency, real-time notifications, themed UI, and bilingual RTL support.',
+      longDescription:
+        'NovaStore is a production-minded e-commerce platform featuring a comprehensive admin workspace (products, orders, users, inventory, reviews, coupons, home placements), an atomic checkout flow with stock concurrency control and idempotency keys to prevent duplicate orders, real-time notifications via Pusher, an 11-theme dynamic design system, tag-based cache invalidation with ISR on the storefront, Cloudinary media upload, role-based access control, a persisted compare tool, URL-driven product filters with debouncing, Persian RTL-first UI, and a mock-payment demo that lets employers explore the full admin experience instantly.',
+      image: '/images/projects/novastore-1.png',
+      images: [
+        '/images/projects/novastore-1.png',
+        '/images/projects/novastore-2.png',
+        '/images/projects/novastore-3.png',
+        '/images/projects/novastore-4.png',
+        '/images/projects/novastore-5.png',
+        '/images/projects/novastore-6.png',
+      ],
+      technologies: [
+        'Next.js',
+        'TypeScript',
+        'Prisma',
+        'PostgreSQL',
+        'NextAuth.js',
+        'Pusher',
+        'Tailwind CSS',
+        'React Query',
+        'React Hook Form',
+        'Zod',
+        'Cloudinary',
+        'Framer Motion',
+      ],
+      liveUrl: 'https://nova-store-topaz.vercel.app/',
+      githubUrl: '',
+      featured: true,
+      year: 2026,
+    },
+    {
       title: 'Humtto City — Full-stack E-commerce',
       description: 'Designed in Figma and built full Next.js storefront & admin panel.',
       longDescription:
@@ -110,7 +144,6 @@ export const projectsData: Record<'en' | 'fa', Project[]> = {
       featured: false,
       year: 2024,
     },
-
     {
       title: 'Ana Parvaz - Travel Agency',
       description:
@@ -239,6 +272,40 @@ export const projectsData: Record<'en' | 'fa', Project[]> = {
       year: 2026,
     },
     {
+      title: 'نوا استور — پلتفرم فروشگاهی مدرن',
+      description:
+        'پلتفرم فروشگاهی فول‌استک با پنل مدیریت جامع، فرایند تسویه‌حساب اتمیک با idempotency، اعلان‌های بی‌درنگ، سیستم تم پویا و رابط کاربری دوزبانه RTL.',
+      longDescription:
+        'نوا استور یک پلتفرم فروشگاهی با نگاه تولیدی است که شامل پنل مدیریت جامع (محصولات، سفارش‌ها، کاربران، موجودی انبار، نظرات، کدهای تخفیف، ویترین صفحه اصلی)، فرایند تسویه‌حساب اتمیک با کنترل همزمانی موجودی و کلید idempotency برای جلوگیری از سفارش‌های تکراری، اعلان‌های بی‌درنگ با Pusher، سیستم طراحی با ۱۱ تم پویا، cache invalidation مبتنی بر tag و ISR روی فروشگاه، آپلود رسانه با Cloudinary، کنترل دسترسی نقش‌محور، ابزار مقایسه‌ی ماندگار، فیلترهای محصول مبتنی بر URL با debounce، رابط کاربری راست‌به‌چپ فارسی، و پرداخت آزمایشی که به کارفرما اجازه می‌دهد تجربه کامل پنل ادمین را بی‌درنگ بررسی کند.',
+      image: '/images/projects/novastore-1.png',
+      images: [
+        '/images/projects/novastore-1.png',
+        '/images/projects/novastore-2.png',
+        '/images/projects/novastore-3.png',
+        '/images/projects/novastore-4.png',
+        '/images/projects/novastore-5.png',
+        '/images/projects/novastore-6.png',
+      ],
+      technologies: [
+        'Next.js',
+        'TypeScript',
+        'Prisma',
+        'PostgreSQL',
+        'NextAuth.js',
+        'Pusher',
+        'Tailwind CSS',
+        'React Query',
+        'React Hook Form',
+        'Zod',
+        'Cloudinary',
+        'Framer Motion',
+      ],
+      liveUrl: 'https://nova-store-topaz.vercel.app/',
+      githubUrl: '',
+      featured: true,
+      year: 2026,
+    },
+    {
       title: 'هامتو سیتی — فروشگاه اینترنتی فول‌استک',
       description: 'طراحی شده در Figma و پیاده‌سازی کامل فروشگاه آنلاین و پنل ادمین با Next.js.',
       longDescription:
@@ -266,7 +333,6 @@ export const projectsData: Record<'en' | 'fa', Project[]> = {
       featured: false,
       year: 2024,
     },
-
     {
       title: 'آناپرواز ایرانیان - آژانس مسافرتی',
       description:
